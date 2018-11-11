@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+function App() {
+  const [count, setCount] = useState(0);
+  const verbs = ['ghost','weightless','translucent','spark','krill','here','hungry','present','above','future','obsolete!'];
+
+  function handleClick() {
+    setCount(count + 1);
   }
+
+  return (
+    <div className='App'>
+      <div className="side-sentence">пуш тхе буттон то аппеассе тхе оверлоардс</div>
+      <div className="container">
+        <div className='you-are'>
+          <p className='you-are-text'>you are</p>
+        </div>
+        <p className='count' onClick={handleClick}>
+          {count}
+        </p>
+        <div className="verb">
+          <p className='verb-text'>{count < 11 ? verbs[count] : verbs[10]}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

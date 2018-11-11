@@ -1,0 +1,9 @@
+Big button requirements
+[x] - When clicked increments by one
+[ ] - Changes colour when clicked
+[ ] - Shows maximum number of clicks on a day
+[ ] - Shows average number of clicks
+[ ] - When clicked multiple of x it shows a reward - React animation? Confetti...silly stuff
+[ ] - Persists date to database
+[ ] - Art deco design - robots of the past
+[ ] - Responsive - Desktop First
