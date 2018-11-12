@@ -92,6 +92,13 @@ a {
   user-select: none;
   background-color: #d11010;
   border: 1rem solid #f5f5f5;
+  
+  box-shadow: inset -1px 1px 135px 6px rgba(117,8,8,0.29);
+}
+
+.count:active {
+  border: 1.05rem solid #f5f5f5;
+  box-shadow: inset -1px 1px 135px 6px rgba(117,8,8,0.9);
 }
 
 .verb-text {
@@ -108,4 +115,14 @@ a {
 
 .verb {
   font-variant: small-caps;
+}
+
+.you-are,
+.count,
+.verb-text {
+    /* noisy background to the button */
+    background-image: url(./noise.png);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    
 }

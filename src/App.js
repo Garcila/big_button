@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import WOW from "wow.js";
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
   const verbs = ['ghost','weightless','translucent','spark','krill','here','hungry','present','above','future','obsolete!'];
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+    
+    const wow = new WOW();
+    wow.init();
+  });
 
   function handleClick() {
     setCount(count + 1);
